@@ -60,7 +60,6 @@ export const AppSidebar = () => {
                       asChild
                       isActive={activeItem === item.name} 
                       onClick={() => setActiveItem(item.name)}
-                      // className={`${activeItem === item.name ? "bg-cyan-400 font-semibold text-white" : "text-gray-400 hover:bg-white/10" } rounded-md px-3 py-1`}
                     >
                       <a href={item.href}>
                         <span>{item.name}</span>

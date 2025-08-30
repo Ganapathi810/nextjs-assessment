@@ -157,6 +157,7 @@ export const DocumentsTable = () => {
                                 <Switch
                                     aria-label="Dashboard Inclusion"
                                     checked={doc.dashboardInclusion}
+                                    onChange={() => {}}
                                     className="data-[state=checked]:bg-blue-400"
                                  />
                             </TableCell>

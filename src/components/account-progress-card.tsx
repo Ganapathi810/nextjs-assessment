@@ -44,14 +44,10 @@ export const AccountProgressCard = ({ progress } : { progress : number }) => {
                                         <Check className="h-4 w-4 text-green-100"/>
                                     </div>
                                 </div>
-                                ))}
+                            ))}
                         </div>
                     </div>
-
                 ))}
-                
-
-
             </CardContent>
         </Card>
     )
