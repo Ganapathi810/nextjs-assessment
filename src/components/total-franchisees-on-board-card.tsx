@@ -54,7 +54,7 @@ export const TotalFranchiseesOnBoardCard = () => {
                     <div className="flex -space-x-2">
                         {sampleData.avatars.map((avatar, index) => (
                             <Avatar key={index}>
-                                <AvatarImage src={avatar} key={index} className="w-8 h-8 rounded-full border-2 border-white" />
+                                <AvatarImage src={avatar} key={index} alt={`U${index}`} className="w-8 h-8 rounded-full border-2 border-white" />
                                 <AvatarFallback>U{index + 1}</AvatarFallback>
                             </Avatar>
                         ))}
@@ -71,7 +71,6 @@ export const TotalFranchiseesOnBoardCard = () => {
                         ></div>
                     ))}
                 </div>
-
                 <div>
                     {sampleData.stages.map((stage, index) => (
                         <div key={index} className="flex justify-between text-sm mt-2">
