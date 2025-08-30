@@ -1,4 +1,4 @@
-import { EllipsisVertical, ListFilter, Search, Tally1 } from "lucide-react"
+import { EllipsisVertical, ListFilter, Search } from "lucide-react"
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import {
@@ -17,7 +17,6 @@ import {
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
@@ -130,6 +129,7 @@ export const DocumentsTable = () => {
                 <TableBody>
                     {sampleDocuments.map((doc, index) => (
                         <TableRow key={index}>
+
                             <TableCell className="flex items-center w-[340px]">
                                 <label htmlFor="rowSelect">
                                     <input id="rowSelect" type="radio" className="w-4 h-4 border border-gray-300 rounded-sm mr-2 appearance-none"></input> 
@@ -140,12 +140,14 @@ export const DocumentsTable = () => {
                                     <span className="text-slate-500">{doc.size}</span>
                                 </div>
                             </TableCell>
+
                             <TableCell className={cn(`${doc.color}`,"w-[150px] font-semibold")}>
                                 <span className={`rounded-full px-2 py-0.5 bg-current/10 border border-current/20`}>{doc.documentType}</span>
                             </TableCell>
 
                             <TableCell>
                                 <Switch
+                                    aria-label="AI App Inclusion"
                                     checked={doc.aiAppInclusion}
                                     className="data-[state=checked]:bg-blue-400"
                                  />
@@ -153,11 +155,14 @@ export const DocumentsTable = () => {
 
                             <TableCell>
                                 <Switch
+                                    aria-label="Dashboard Inclusion"
                                     checked={doc.dashboardInclusion}
                                     className="data-[state=checked]:bg-blue-400"
                                  />
                             </TableCell>
+
                             <TableCell>
+                                <label htmlFor="stage-access" className="hidden">Stage Access</label>
                                 <Select defaultValue={doc.stageAccess}>
                                     <SelectTrigger className="w-[130px]">
                                         <SelectValue placeholder="Select Stage Access" />
@@ -171,13 +176,15 @@ export const DocumentsTable = () => {
                                         </SelectGroup>
                                     </SelectContent>
                                     </Select>
-                                </TableCell>
+                            </TableCell>
+
                             <TableCell className="flex justify-center">
                                 <div className="flex gap-1">
                                     <Button variant='ghost' className="font-semibold bg-white text-slate-700">Delete</Button>
                                     <Button variant="ghost" className="text-blue-500">Edit</Button>
                                 </div>
                             </TableCell>
+
                         </TableRow>
                         ))}
                 </TableBody>
