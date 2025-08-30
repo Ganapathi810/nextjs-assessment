@@ -29,7 +29,8 @@ export const ProspectsLeadsCard = () => {
     return (
         <Card>
             <CardHeader>
-                <CardTitle>Prospect Leads</CardTitle></CardHeader>
+                <CardTitle>Prospect Leads</CardTitle>
+            </CardHeader>
             <CardContent>
                 <div className="flex flex-col gap-4">
                     {sampleData.map((item, index) => (

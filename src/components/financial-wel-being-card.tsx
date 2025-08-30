@@ -45,6 +45,5 @@ export const FinancialWellBeingCard = () => {
                 </div>
             </CardContent>
         </Card>
-        
     )
 }

@@ -4,7 +4,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { AvatarFallback, AvatarImage,Avatar} from "./ui/avatar"
+import { AvatarFallback, AvatarImage,Avatar } from "./ui/avatar"
 
 export const KeyInsightsAndWellBeingCard = ({ salesGrowthPercentage } : { salesGrowthPercentage : number }) => {
 

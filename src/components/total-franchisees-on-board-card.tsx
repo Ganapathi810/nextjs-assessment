@@ -4,8 +4,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { AvatarFallback, AvatarImage } from "@radix-ui/react-avatar"
-import { Avatar } from "./ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
 import { MyTrendingUp } from "./my-trending-up"
 
 export const TotalFranchiseesOnBoardCard = () => {   

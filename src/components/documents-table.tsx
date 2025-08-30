@@ -93,6 +93,8 @@ export const DocumentsTable = () => {
 
     return (
         <div className="border rounded-md shadow-sm p-5 mt-5 mx-7">
+
+            {/* Header section */}
             <div className="flex items-center justify-between mb-4">
                 <div className="flex flex-col items-start">
                     <h2 className="text-lg font-semibold">My Uploads</h2>
@@ -114,6 +116,7 @@ export const DocumentsTable = () => {
                 </div>
             </div>
 
+            {/* Table section */}
             <Table>
                 <TableHeader>
                     <TableRow>
@@ -128,7 +131,9 @@ export const DocumentsTable = () => {
                     {sampleDocuments.map((doc, index) => (
                         <TableRow key={index}>
                             <TableCell className="flex items-center w-[340px]">
-                                <input type="radio" className="w-4 h-4 border border-gray-300 rounded-sm mr-2 appearance-none"></input> 
+                                <label htmlFor="rowSelect">
+                                    <input id="rowSelect" type="radio" className="w-4 h-4 border border-gray-300 rounded-sm mr-2 appearance-none"></input> 
+                                </label>
                                 <Image src="/pdfDocument.png" alt="pdf icon" width={50} height={50} className="mr-2"/>
                                 <div className="flex flex-col gap-1">
                                     <span className="font-semibold">{doc.documentName}</span>
@@ -136,7 +141,7 @@ export const DocumentsTable = () => {
                                 </div>
                             </TableCell>
                             <TableCell className={cn(`${doc.color}`,"w-[150px] font-semibold")}>
-                                <span className={`rounded-full px-2 py-0.5 bg-current/10 border border-current/20 `}>{doc.documentType}</span>
+                                <span className={`rounded-full px-2 py-0.5 bg-current/10 border border-current/20`}>{doc.documentType}</span>
                             </TableCell>
 
                             <TableCell>
