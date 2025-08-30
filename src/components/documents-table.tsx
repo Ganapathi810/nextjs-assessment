@@ -100,7 +100,7 @@ export const DocumentsTable = () => {
                     <h2 className="text-lg font-semibold">My Uploads</h2>
                     <p className="text-gray-500">Documents that are uploaded by you</p>
                 </div>
-                <Button className="bg-white">
+                <Button id="menuButtonForTable" className="bg-white">
                     <EllipsisVertical className="h-4 w-4 text-black"/>
                 </Button>
             </div>
