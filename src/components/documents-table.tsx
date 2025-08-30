@@ -1,3 +1,5 @@
+"use client"
+
 import { EllipsisVertical, ListFilter, Search } from "lucide-react"
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
@@ -149,7 +151,7 @@ export const DocumentsTable = () => {
                                 <Switch
                                     aria-label="AI App Inclusion"
                                     checked={doc.aiAppInclusion}
-                                    className="data-[state=checked]:bg-blue-400"
+                                    className="data-[state=checked]:bg-blue-400 cursor-pointer"
                                  />
                             </TableCell>
 
@@ -157,8 +159,7 @@ export const DocumentsTable = () => {
                                 <Switch
                                     aria-label="Dashboard Inclusion"
                                     checked={doc.dashboardInclusion}
-                                    onChange={() => {}}
-                                    className="data-[state=checked]:bg-blue-400"
+                                    className="data-[state=checked]:bg-blue-400  cursor-pointer"
                                  />
                             </TableCell>
 

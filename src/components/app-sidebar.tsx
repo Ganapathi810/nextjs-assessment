@@ -38,7 +38,6 @@ export const AppSidebar = () => {
     { name: "Zee Sales Targets", href: "#" },
     { name: "MAI Settings", href: "#" },
     { name: "Pending Questions", href: "#" },
-
   ]
 
   
